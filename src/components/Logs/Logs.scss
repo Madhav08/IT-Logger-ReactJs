@@ -1,0 +1,68 @@
+.logs {
+  border: 1.2px solid #333;
+  width: 60vw;
+  margin: 140px auto;
+  padding: 20px;
+
+  &__heading {
+    text-align: center;
+    padding: 14px;
+    font-size: 1.5rem;
+    border-bottom: 0.8px solid #d0d0d0;
+    background: #232e3a;
+    color: #ffffff;
+    margin: -21px -21px 21px -21px;
+  }
+}
+
+.logsItem {
+  padding: 14px;
+  border-bottom: 0.8px solid #d0d0d0;
+  display: flex;
+  justify-content: space-between;
+
+  &__deleteBtn {
+    color: grey;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-left: 60px;
+
+    &:hover {
+      color: #b91111;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 56px;
+      margin-left: 3px;
+    }
+  }
+
+  &__boldText {
+    font-weight: bold;
+    color: black;
+  }
+
+  &__mainText {
+    color: #122cc2;
+  }
+
+  &__dangerText {
+    color: #dd2323;
+  }
+
+  &__secondaryText {
+    color: #b4aaaa;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin: 0 0 12px 0;
+  }
+}
+
+.addLogs {
+  border: 1.2px solid #333333;
+  width: 60vw;
+  margin: 140px auto;
+  padding: 20px;
+}

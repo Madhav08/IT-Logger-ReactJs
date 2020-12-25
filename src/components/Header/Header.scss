@@ -1,0 +1,60 @@
+.header {
+  background: #232e3a;
+  color: #fff;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 2px solid #000000;
+
+  &__input {
+    background: #232e3a;
+    margin-left: 45px;
+    border: none;
+    border-bottom: 2px solid #ffff;
+    outline: none;
+    padding: 12px;
+    color: #ffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+
+    &:focus {
+      border-bottom: 2px solid hotpink;
+    }
+
+    @media only screen and (max-width: 680px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 680px) {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 126px;
+  }
+}
+
+.header__navigation {
+  &Item {
+    display: flex;
+    padding: 24px;
+
+    a {
+      padding: 12px;
+
+      li {
+        &:hover {
+          color: hotpink;
+        }
+      }
+    }
+    @media only screen and (max-width: 680px) {
+      padding: 11px;
+    }
+  }
+}
