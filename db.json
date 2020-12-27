@@ -4,7 +4,7 @@
       "id": 1,
       "message": "Changed hard Drive on work station 005",
       "attention": false,
-      "date": "11-12-2020",
+      "date": "22-12-20",
       "tech": "Sam Smith"
     },
     {
@@ -15,11 +15,25 @@
       "tech": "John Doe"
     },
     {
-      "id": 2,
+      "id": 3,
       "message": "Changed memory on workstation 2001",
       "attention": false,
       "date": "21-12-2020",
       "tech": "Sara Wiliams"
+    },
+    {
+      "message": "Sample Message",
+      "tech": "Sam Smith",
+      "attention": true,
+      "date": "Sun Dec 27 2020 23:41:04 GMT+0530 (India Standard Time)",
+      "id": 4
+    },
+    {
+      "message": "Changed hard Drive on 008",
+      "tech": "Sample name",
+      "attention": false,
+      "date": "Sun Dec 27 2020 23:41:22 GMT+0530 (India Standard Time)",
+      "id": 5
     }
   ],
   "techs": [
@@ -37,6 +51,11 @@
       "id": 3,
       "firstname": "Sam",
       "lastname": "Smith"
+    },
+    {
+      "firstname": "Sample",
+      "lastname": "name",
+      "id": 4
     }
   ]
 }

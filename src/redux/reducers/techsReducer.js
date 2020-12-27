@@ -1,21 +1,21 @@
-import { SET_LOGS, ADD_LOGS } from '../types';
+import { ADD_TECHS, SET_TECHS } from '../types';
 
 const initialState = {
-  logs: null,
+  techs: null,
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SET_LOGS:
+    case SET_TECHS:
       return {
         ...state,
-        logs: action.payload,
+        techs: action.payload,
       };
-    case ADD_LOGS: {
+    case ADD_TECHS: {
       return {
         ...state,
-        logs: [...state.logs, action.payload],
+        techs: [...state.techs, action.payload],
       };
     }
     default:
