@@ -2,7 +2,7 @@ import './App.scss';
 import Header from './components/Header/Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './store';
+import store from './redux/store';
 import Logs from './components/Logs/Logs';
 import AddLogs from './components/Logs/AddLogs';
 import AddTechs from './components/Techs/AddTechs';
