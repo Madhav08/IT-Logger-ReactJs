@@ -1,4 +1,4 @@
-import { SET_TECHS, ADD_TECHS } from '../types';
+import { SET_TECHS, ADD_TECHS, REMOVE_TECH } from '../types';
 
 export const setTechs = () => async (dispatch) => {
   try {
@@ -28,6 +28,21 @@ export const addTechs = (tech) => async (dispatch) => {
     dispatch({
       type: ADD_TECHS,
       payload: data,
+    });
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+export const removeTechs = (id) => async (dispatch) => {
+  try {
+    await fetch(`/techs/${id}`, {
+      method: 'DELETE',
+    });
+
+    dispatch({
+      type: REMOVE_TECH,
+      payload: id,
     });
   } catch (err) {
     console.log(err.message);

@@ -9,7 +9,7 @@ const AddLogs = ({ techs: { techs }, setTechs, addLogs }) => {
     message: '',
     tech: 'DEFAULT',
     attention: false,
-    date: Date(),
+    date: new Date().toLocaleString(),
   });
 
   useEffect(() => {
@@ -27,7 +27,12 @@ const AddLogs = ({ techs: { techs }, setTechs, addLogs }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addLogs(logs);
-    setLogs({ message: '', tech: 'DEFAULT', attention: false, date: Date() });
+    setLogs({
+      message: '',
+      tech: 'DEFAULT',
+      attention: false,
+      date: new Date().toLocaleString(),
+    });
   };
 
   return (

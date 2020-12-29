@@ -4,3 +4,31 @@
   margin: 140px auto;
   padding: 20px;
 }
+
+.techs {
+  margin-top: 14px;
+
+  &__container {
+    border: 1px solid lightgrey;
+    display: flex;
+    border-radius: 6px;
+    padding: 8px;
+  }
+
+  &__name {
+    flex: 1;
+    font-size: 1.2rem;
+  }
+
+  &__deleteBtn {
+    color: grey;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-left: 60px;
+
+    &:hover {
+      color: #b91111;
+    }
+  }
+}

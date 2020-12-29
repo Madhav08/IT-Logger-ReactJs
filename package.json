@@ -48,5 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "https://my-json-server.typicode.com/Madhav08/Fake_REST_API"
 }

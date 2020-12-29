@@ -1,4 +1,4 @@
-import { SET_LOGS, ADD_LOGS } from '../types';
+import { SET_LOGS, ADD_LOGS, REMOVE_LOGS } from '../types';
 
 const initialState = {
   logs: null,
@@ -18,6 +18,11 @@ export default (state = initialState, action) => {
         logs: [...state.logs, action.payload],
       };
     }
+    case REMOVE_LOGS:
+      return {
+        ...state,
+        logs: state.logs.filter((log) => log.id !== action.payload),
+      };
     default:
       return {
         ...state,

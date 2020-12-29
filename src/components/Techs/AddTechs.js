@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import './Techs.scss';
 import { addTechs } from '../../redux/actions/techsAction';
+import { setTechs as newSetTechs } from '../../redux/actions/techsAction';
+import Techs from './Techs';
 
-const AddTechs = ({ addTechs }) => {
+const AddTechs = ({ allTechs, addTechs, newSetTechs }) => {
   const [techs, setTechs] = useState({
     firstname: '',
     lastname: '',
   });
+
+  useEffect(() => {
+    newSetTechs();
+  }, [newSetTechs]);
 
   const onChange = (e) => {
     setTechs({ ...techs, [e.target.name]: e.target.value });
@@ -42,8 +48,20 @@ const AddTechs = ({ addTechs }) => {
 
         <input type='submit' value='Add' className='form__submitBtn' />
       </form>
+      {allTechs.techs?.map((tech) => (
+        <Techs
+          key={tech.id}
+          id={tech.id}
+          fname={tech.firstname}
+          lname={tech.lastname}
+        />
+      ))}
     </div>
   );
 };
 
-export default connect(null, { addTechs })(AddTechs);
+const mapStateToProps = (state) => ({
+  allTechs: state.techs,
+});
+
+export default connect(mapStateToProps, { addTechs, newSetTechs })(AddTechs);

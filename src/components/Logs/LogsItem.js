@@ -1,8 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './Logs.scss';
+import { deleteLogs } from '../../redux/actions/logsAction';
 import { MdDelete } from 'react-icons/md';
 
-const LogsItem = ({ id, message, attention, date, tech }) => {
+const LogsItem = ({ id, message, attention, date, tech, deleteLogs }) => {
+  const handleDelete = (id) => {
+    deleteLogs(id);
+  };
+
   return (
     <div className='logsItem'>
       <div className='logsItem__text'>
@@ -18,9 +24,12 @@ const LogsItem = ({ id, message, attention, date, tech }) => {
           <span className='logsItem__boldText'> {tech}</span> on {date}
         </p>
       </div>
-      <MdDelete className='logsItem__deleteBtn' />
+      <MdDelete
+        className='logsItem__deleteBtn'
+        onClick={() => handleDelete(id)}
+      />
     </div>
   );
 };
 
-export default LogsItem;
+export default connect(null, { deleteLogs })(LogsItem);
